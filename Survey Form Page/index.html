@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Survey Form</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+		<p id="description">Thank you for taking the time to help us improve the platform</p>
+		
+		<form id="survey-form">
+			<label id="name-label" for="name">Name:</label>
+			<input id="name" type="text" placeholder="Enter your name." required>
+
+			<label id="email-label" for="email">Email:</label>
+			<input id="email" type="email" placeholder="Enter your email." required>
+
+			<label id="number-label" for="number">Age(Optional):</label>
+			<input id="number" type="number" min="0" max="100" placeholder="Age.">
+
+			<label for="dropdown">
+				What is your favorite pet?
+				<select id="dropdown">
+					<option value="dog">Dog</option>
+					<option value="cat">Cat</option>
+					<option value="bird">Bird</option>
+					<option value="tiger">Tiger</option>
+				</select>
+			</label>
+
+			<label class="items-label">				
+				Which javascript framework do you use most?
+				<div>
+					<label><input type="radio" name="react">React</label>
+					<label><input type="radio" name="angular">Angular</label>
+					<label><input type="radio" name="vue">Vue</label>
+					<label><input type="radio" name="svelte">Svelte</label>
+					<label><input type="radio" name="elm">Elm</label>
+				</div>
+			</label>
+
+			<label class="items-label">				
+				Which javascript framework do you know how to use?
+				<div>
+					<label><input type="checkbox" value="react">React</label>
+					<label><input type="checkbox" value="angular">Angular</label>
+					<label><input type="checkbox" value="vue">Vue</label>
+					<label><input type="checkbox" value="svelte">Svelte</label>
+					<label><input type="checkbox" value="elm">Elm</label>
+				</div>
+			</label>
+
+			<label class="items-label">Give us your comment:<textarea cols="30" rows="10" placeholder="Comment"></textarea></label>
+
+			<button id="submit" type="submit">Submit</button>
+		</form>
+	</body>
+</html>
