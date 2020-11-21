@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,wght@0,800;1,200&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	padding-top: 2rem;
+	background: #a8a8a8;
+	background: linear-gradient(45deg, #a8a8a8 0%, #dddada 50%, #a8a8a8 100%);
+}
+
+div#header {
+	background: #dbdb76;
+	background: linear-gradient(10deg, #91914f 0%, #dbdb76 50%, #91914f 100%);
+	height: 9rem;
+	margin-bottom: 3rem;
+	text-align: center;
+	box-shadow: 0px 4px 10px black;
+}
+
+h1.title {
+	font-size: 3.5rem;
+	font-family: 'Texturina', serif;
+	font-weight: 800;
+}
+
+p.subtitle {
+	font-size: 1.5rem;
+	font-family: 'Texturina', serif;
+	font-weight: 200;
+	font-style: italic;
+}
+
+div#img-div {
+	width: 50rem;
+	margin: auto;
+	background: #ddddd8;
+	background: linear-gradient(
+		to right bottom,
+		#c5c59f 0%,
+		#ddddd8 50%,
+		#c5c59f 100%
+	);
+	width: 100vw;
+	box-shadow: 0px 4px 10px black;
+}
+
+img#image {
+	object-fit: cover;
+	max-width: 50rem;
+	width: 100%;
+	display: flex;
+	margin: auto;
+	padding: 1.5rem;
+}
+
+div#img-caption {
+	text-align: center;
+	padding-bottom: 1rem;
+	font-size: 1.2rem;
+	width: 80%;
+	margin: auto;
+}
+
+div#tribute-info {
+	display: grid;
+	grid-template-columns: minmax(4rem, 1fr) minmax(25rem, 35rem) minmax(
+			4rem,
+			1fr
+		);
+	margin-top: 2rem;
+}
+
+div#tribute-info ul {
+	grid-column: 2/3;
+	text-align: justify;
+	list-style: none;
+}
+
+ul li {
+	margin: 1rem 0;
+}
+
+ul li h3 {
+	text-align: center;
+	margin-bottom: 0.7rem;
+}
+
+ul li p {
+	text-indent: 2rem;
+	margin-bottom: 1.4rem;
+}
+
+div#footer {
+	background: #ddddd8;
+	background: linear-gradient(
+		to right bottom,
+		#c5c59f 0%,
+		#ddddd8 50%,
+		#c5c59f 100%
+	);
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+	box-shadow: 0px 4px 10px black;
+}
+
+div a#tribute-link {
+	line-height: 4rem;
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	cursor: pointer;
+	animation-name: grow;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes grow {
+	0% {
+		font-size: 1.8rem;
+	}
+	100% {
+		font-size: 2.3rem;
+	}
+}
