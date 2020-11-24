@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Documentation Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Svelte API</header>
+    <a href="#BEFORE_WE_BEGIN" class="nav-link">BEFORE WE BEGIN</a>
+    <a href="#COMPONENT_FORMAT" class="nav-link">COMPONENT FORMAT</a>
+    <a href="#TEMPLATE_SYNTAX" class="nav-link">TEMPLATE SYNTAX</a>
+    <a href="#RUN_TIME" class="nav-link">RUN TIME</a>
+    <a href="#COMPILE_TIME" class="nav-link">COMPILE TIME</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="BEFORE_WE_BEGIN">
+      <header>BEFORE WE BEGIN</header>
+      <p>This page contains detailed API reference documentation. It's intended to be a resource for people who already have some familiarity with Svelte.</p>
+      <p>If that's not you (yet), you may prefer to visit the  or the  before consulting this reference.</p>
+      <code>&lt;script&gt;<br>let name = 'world';<br>&lt;/script&gt;<br>&lt;h1&gt;<br>Hello {name}!<br>&lt;/h1&gt;</code>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+      <li>SASS</li>
+      <li>NODE</li>
+    </section>
+    
+    <section class="main-section" id="COMPONENT_FORMAT">
+      <header>COMPONENT FORMAT</header>
+      <p>Components are the building blocks of Svelte applications. They are written into .svelte files, using a superset of HTML.</p>
+      <p>All three sections — script, styles and markup — are optional.</p>
+      <code>&lt;script&gt;<br>// logic goes here<br>&lt;/script&gt;<br>&lt;style&gt;<br>/* styles go here */<br>&lt;/style&gt;</code>
+      <li>André</li>
+      <li>Camila</li>
+      <li>Pérola</li>
+      <li>Charles</li>
+      <li>Lola</li>
+    </section>
+
+    <section class="main-section" id="TEMPLATE_SYNTAX">
+      <header>TEMPLATE SYNTAX</header>
+      <p>Tags</p>
+      <p>A lowercase tag, like <div>, denotes a regular HTML element. A capitalised tag, such as &lt;Widget&gt; or &lt;Namespace.Widget&gt;, indicates a component.</p>
+      <code>&lt;script&gt;<br>import Widget from './Widget.svelte';<br>&lt;/style&gt;<br>&lt;div&gt;<br>&lt;Widget/&gt;<br>&lt;/div&gt;</code>
+      <li>Tags</li>
+      <li>Attributes and props</li>
+      <li>Text expressions</li>
+      <li>Comments</li>
+      <li>{#if ...}</li>
+    </section>
+
+    <section class="main-section" id="RUN_TIME">
+      <header>RUN TIME</header>
+      <p>By default, attributes work exactly like their HTML counterparts.</p>
+      <p>As in HTML, values may be unquoted.</p>
+      <code>&lt;script&gt;<br>import { onMount } from 'svelte';<br>onMount(() => {<br>console.log('the component has mounted');<br>});<br>&lt;/style&gt;</code>
+      <li>svelte</li>
+      <li>onMount</li>
+      <li>beforeUpdate</li>
+      <li>afterUpdate</li>
+      <li>onDestroy</li>
+    </section>
+    
+    <section class="main-section" id="COMPILE_TIME">
+      <header>COMPILE TIME</header>
+      <p>svelte</p>
+      <p>The svelte package exposes lifecycle functions and the context API.</p>
+      <code>result: {js,css,ast,warnings,vars,stats} = svelte.compile(source: string, options?: {...})</code>
+      <li>svelte.compile</li>
+      <li>svelte.parse</li>
+      <li>svelte.preprocess</li>
+      <li>svelte.walk</li>
+      <li>svelte.VERSION</li>
+    </section>
+  </main>  
+</body>
+</html>
